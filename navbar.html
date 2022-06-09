@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navbar</title>
+    <style>
+      #container {
+        height: 60px;
+
+        background-color: #1c2838;
+        width: 100%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+      }
+      #container > div:first-child {
+        margin-left: 20px;
+      }
+      #container > div:last-child {
+        display: flex;
+        width: 30%;
+        justify-content: space-around;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  let first_div = document.createElement("div");
+  let p = document.createElement("p");
+  p.innerText = "Reebok";
+  first_div.append(p);
+  let main_div = document.querySelector("#container");
+  main_div.append(first_div);
+  let last_div = document.createElement("div");
+  let men = document.createElement("div");
+  men.innerText = "Men";
+  let women = document.createElement("div");
+  women.innerText = "Women";
+  let login = document.createElement("div");
+  login.innerText = "Login";
+  let signup = document.createElement("div");
+  signup.innerText = "Signup";
+  last_div.append(men, women, login, signup);
+  main_div.append(last_div);
+</script>
